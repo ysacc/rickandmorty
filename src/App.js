@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Card from './components/Card.jsx'
+import Cards from './components/Cards.jsx'
+import SearchBar from './components/SearchBar.jsx'
+import characters, { Rick } from './data.js'
+import Header from '../src/components/header'
+import styles from "./components/bodyStyle.module.css"
 
-function App() {
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <body className={styles.containt}>
+    <div className= {styles.App}>
+      <Header />
+      <div className = {styles.barra}>
+        <SearchBar 
+          onSearch={(characterID) => window.alert(characterID)}
+        />
+      </div>
+      <div className={styles.div_body}>
+        <Card
+          name={Rick.name}
+          species={Rick.species}
+          gender={Rick.gender}
+          image={Rick.image}
+          onClose={() => window.alert('Emulamos que se cierra la card')}
+        />
+      </div >
+      
+      <div className={styles.div_body}>
+        <Cards
+          characters={characters}
+        />
+      </div>
+      <hr />
     </div>
-  );
+    </body>
+  )
 }
 
-export default App;
+export default App

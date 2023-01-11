@@ -1,0 +1,115 @@
+.button{
+    background-color: #4CAF50; 
+    border: white;
+    border-radius: 50px;
+    border-color: white;
+    color: none;
+    padding: 10px 60px;
+    text-align: center;
+    text-decoration:solid;
+    display: inline-block;
+    font-size: 16px;
+    width: 110px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.button {
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s; 
+}  
+
+.button:hover {
+    background-color: #4CAF50; 
+    color: white; 
+}  
+
+
+/* .card{
+    display: flex;
+    height: 300px;
+    width: 260px;
+    background-color: slateblue;
+    border-radius: 40px;
+    box-shadow: -1rem 0 3rem #000;
+    margin-left: -50px;
+    transition: 0.4s ease-out;
+    position: relative;
+    left: 50px;
+    text-align: center;
+    color: black;
+    border: 20px solid rgb(0, 0, 0);
+    column-count:4
+
+} */
+
+/* .card:not(:first-child) {
+    text-align: center;
+}  */
+
+.card:hover {
+    transform: translateY(-20px);
+    transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+    position: relative;
+    left: 50px;
+    transition: 0.4s ease-out;
+}  
+
+.h1{
+    text-align: center;
+    color:yellowgreen;
+} 
+
+.h2{
+    text-align: center;
+    display: "block";
+	height: "340px";
+	padding: "10px";
+	width: "150px";
+} 
+
+.ima {
+    max-width: 100%;
+    border-radius: 50%;
+}  
+.card {
+    width: 300px;
+    height: max-content;
+    box-shadow: 5px 5px 5px rgb(114, 114, 114);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgb(46, 46, 46);
+    color: whitesmoke;
+    margin-bottom: 10px;
+    align-items: center;
+    contain: content;
+    margin: 40px;
+    position: relative;
+    display: inline-block;
+    cursor:auto;
+    display: grid;
+    justify-content: center;
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    /* 
+    align-self: center;
+    border: 1px; */
+    display: grid;
+    justify-content: center;
+    column-count: 3
+}
+
+/* @media screen and (max-width: 480px) {
+    .body{
+        display: block;
+        width: calc(100% - 80px);
+        
+    }
+} */
+
