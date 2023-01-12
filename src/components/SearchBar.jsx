@@ -1,4 +1,4 @@
-import styles from "./SearchBar.module.css"
+import styles from "./Nav.module.css"
 
 export default function SearchBar(props) {
    return (

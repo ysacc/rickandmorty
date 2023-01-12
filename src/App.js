@@ -5,6 +5,7 @@ import SearchBar from './components/SearchBar.jsx'
 import characters, { Rick } from './data.js'
 import Header from '../src/components/header'
 import styles from "./components/bodyStyle.module.css"
+import Nav from "../src/components/Nav.jsx"
 
 function App () {
   return (
@@ -12,20 +13,8 @@ function App () {
     <div className= {styles.App}>
       <Header />
       <div className = {styles.barra}>
-        <SearchBar 
-          onSearch={(characterID) => window.alert(characterID)}
-        />
+        <Nav/>
       </div>
-      <div className={styles.div_body}>
-        <Card
-          name={Rick.name}
-          species={Rick.species}
-          gender={Rick.gender}
-          image={Rick.image}
-          onClose={() => window.alert('Emulamos que se cierra la card')}
-        />
-      </div >
-      
       <div className={styles.div_body}>
         <Cards
           characters={characters}
