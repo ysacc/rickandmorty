@@ -1,0 +1,32 @@
+.Nav{
+    /* display:inline;
+    width: 100%;
+    border: 5px solid #555;
+    text-align: center;
+    padding: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+    margin: 10px;
+    background-color: #23b110;
+    float: left; */
+    /* overflow: hidden;
+    background-color: #16d553;
+    float: right;
+    padding: 6px;
+    border: 20px black;
+    margin:15px 15px 13px 5px;
+    font-size: 17px;
+    width: 100%;
+    text-align: right;
+    border-radius: 5%; */
+    background: rgba(35, 185, 84, 0.26);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.8px);
+    -webkit-backdrop-filter: blur(1.8px);
+    border: 1px solid rgba(35, 185, 84, 0.93);
+    text-align: right;
+    margin:15px 15px 13px 5px;
+    padding: 20px;
+}
+

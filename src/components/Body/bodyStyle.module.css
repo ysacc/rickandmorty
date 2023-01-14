@@ -1,7 +1,7 @@
 .containt{
     width: 100%;
     height: 100%;
-    margin:0px;
+    /* margin:0px; */
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
     background-image: url("https://cdn.pocket-lint.com/r/s/1200x630/assets/images/162179-tv-news-feature-rick-and-morty-season-6-release-date-trailer-and-how-to-watch-image1-kbmgzwpsy5.jpg");
     background-size: cover;
@@ -10,12 +10,15 @@
     background-attachment: fixed;
 }
 .header{
-    width: 100%;
+    /* width:fit-content ;
     height: 100%;
     margin:15px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
     background-color: none;
     align-content: center;
+    overflow:-moz-hidden-unscrollable; */
+    
+    
 }
 .App{
     padding: '25px';
@@ -24,10 +27,10 @@ img {
     display: block;
     margin: auto;
 }
-div_body{
+/* div_body{
     margin: 0 auto;
-}
-.barra{
+} */
+/* .barra{
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -38,4 +41,13 @@ div_body{
     margin-right:auto;
     margin-left:auto;
     border-radius: 20px;
-}
+} */
+/* .header__image{ */
+    /* width:100% ;
+    height: 100%; */
+    /* margin:15px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    background-color: none;
+    align-content: center;
+    overflow:auto;
+    display: flex; */
