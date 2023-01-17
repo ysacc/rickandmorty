@@ -1,6 +1,7 @@
 import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import styles from "../Detail/Detail.module.css"
 
 const Details = ()=>{
     const {detailId} = useParams();
@@ -23,7 +24,7 @@ const Details = ()=>{
     }, [detailId])
 
     return(
-        <div>
+        <div className={styles.detail}>
             <button>
                 <Link to="/home">Home</Link>
             </button>

@@ -4,14 +4,20 @@ import styles from "./Card.module.css"
 
 export default function Card({name,species,gender,image,onClose,id}) {
    return (
-      <div >
-         <button  onClick={onClose}>X</button>
-         <Link to={`/detail/${id}`}>
-            <h1 >{name}</h1>
-         </Link>
-         <h2 >{species}</h2>
-         <h2 >{gender}</h2>
-         <img src={image} alt="img" />
+      <div className={styles.containt}>
+      <div className={`${styles.card} d-flex flex-column `} >
+         <button className={styles.button} onClick={onClose}>Cerrar</button>
+         <img className={`${styles.img} img-fluid`} src={image} alt="img" />
+         <div className={`${styles.content}`}>
+            <Link to={`/detail/${id}`}>
+               <div className={styles.name}>{name}</div>
+            </Link>
+            <div className="">
+               <div className={styles.species}>Species: {species}</div>
+               <div className={styles.gender}>Gender :{gender}</div>
+            </div>
+         </div>
+      </div>
       </div>
    );
 }

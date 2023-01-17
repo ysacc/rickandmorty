@@ -7,7 +7,7 @@ import { Route,Routes,useLocation } from 'react-router-dom'
 import About from './components/About/About.jsx'
 import Detail from "./components/Detail/Detail.jsx"
 import Form from './components/Form/Form'
-import { render } from '@testing-library/react'
+// import { render } from '@testing-library/react'
 
 
 
@@ -33,7 +33,8 @@ function App () {
   }
   
   return (
-    <div className='App' style={{ padding: '25px' }}>
+    <body className={styles.containt}>
+    <div className='App' style={styles.app}>
         <Nav  onSearch={onSearch}/>
         <Routes>
           <Route path='/' element={<Form/>} />
@@ -42,6 +43,7 @@ function App () {
           <Route path='detail/:detailId' element={<Detail/>} />
         </Routes>
     </div>
+    </body>
   )
 }
 

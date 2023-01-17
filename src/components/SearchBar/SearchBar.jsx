@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../Nav/Nav.module.css"
+
 
 export default function SearchBar({onSearch}) {
    const[character,setCharacter]=useState("")
@@ -8,7 +8,7 @@ export default function SearchBar({onSearch}) {
       setCharacter(event.target.value)
    }
    return (
-      <div className= {styles.search}>
+      <div >
          <input type='search' value={character} onChange={HandleChange} />
          <button onClick={()=>onSearch(character)}>Agregar</button>
       </div>

@@ -1,4 +1,4 @@
-.Nav{
+.nav{
     /* display:inline;
     width: 100%;
     border: 5px solid #555;
@@ -28,5 +28,9 @@
     text-align: right;
     margin:15px 15px 13px 5px;
     padding: 20px;
+}
+.link{
+    text-align: left;
+    
 }
 

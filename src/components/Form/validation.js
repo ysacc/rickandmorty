@@ -4,7 +4,7 @@ import React from "react";
 export default function validation (userData){
     const userErrors = {};
     const regexEmail = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
-    const regexPassword= /^[a-z0-9_-]{6-12}$/
+    // const regexPassword= /^[a-z0-9_-]{6-12}$/
     if (!userData.username)userErrors.username = "Por favor, complete este campo"
     if (!regexEmail.test(userData.username)) userErrors.username = "Por favor, usar un correo"
     if (userData.username.length > 35)userErrors.username = "Username demasiado largo"
