@@ -31,6 +31,26 @@
 }
 .link{
     text-align: left;
-    
+    text-decoration: none;
+    color:black;
+    padding: 10px;
+    align-items: left;
+    display: inline-block;
+    align-self:left;
 }
 
+.search{}
+.input {
+    width: 40%; border-radius: 8px;
+    border: 2px solid #0b5ed7;
+    box-shadow: 1px 3px 9px rgba($color: #000000, $alpha: 0.25);
+    padding: 10px 15px;
+    &:focus { outline: none; }
+}
+.btn {
+    box-shadow: 1px 3px 9px rgba($color: #000000, $alpha: 0.25);
+    text-align :right;
+}
+@media (max-width: 576px) {
+    .input { width: 80%; }
+}

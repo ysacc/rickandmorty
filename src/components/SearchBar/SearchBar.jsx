@@ -1,4 +1,5 @@
 import { useState } from "react";
+import styles from "../Nav/Nav"
 
 
 export default function SearchBar({onSearch}) {
@@ -9,8 +10,8 @@ export default function SearchBar({onSearch}) {
    }
    return (
       <div >
-         <input type='search' value={character} onChange={HandleChange} />
-         <button onClick={()=>onSearch(character)}>Agregar</button>
+         <input type='search' value={character} onChange={HandleChange} placeholder="Search for ID" className={styles.input} />
+         <button onClick={()=>onSearch(character)}className={`${styles.btn} btn btn-primary fs-5`}>Agregar</button>
       </div>
    );
 }

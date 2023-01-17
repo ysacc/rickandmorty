@@ -25,15 +25,15 @@ const Details = ()=>{
 
     return(
         <div className={styles.detail}>
-            <button>
-                <Link to="/home">Home</Link>
+            <button className={styles.button}>
+                <Link to="/home" className={styles.link}>Home</Link>
             </button>
-            <h1>{character?.name}</h1>
-            <h2>{character?.status}</h2>
-            <h2>{character?.species}</h2>
-            <h2>{character?.gender}</h2>
-            <h2>{character?.origin?.name}</h2>
-            <img src={character?.image} alt={character.name}/>
+            <h1 className={styles.name}>{character?.name}</h1>
+            <h2 className={styles.estado}>{character?.status}</h2>
+            <h2 className={styles.estado}>{character?.species}</h2>
+            <h2 className={styles.estado}>{character?.gender}</h2>
+            <h2 className={styles.estado}>{character?.origin?.name}</h2>
+            <img className={styles.img} src={character?.image} alt={character.name}/>
         </div>
     )
 

@@ -14,7 +14,7 @@ export default function Card({name,species,gender,image,onClose,id}) {
             </Link>
             <div className="">
                <div className={styles.species}>Species: {species}</div>
-               <div className={styles.gender}>Gender :{gender}</div>
+               <div className={styles.gender}>Gender : {gender}</div>
             </div>
          </div>
       </div>
