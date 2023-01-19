@@ -1,10 +1,36 @@
 import { Link } from "react-router-dom";
 import styles from "./Card.module.css"
+import { addFavorite,deleteFavorite } from "../../redux/actions";
+import { useState } from "react";
 
 
-export default function Card({name,species,gender,image,onClose,id}) {
+export default function Card({addFavorite,deleteFavorite,name,species,gender,image,onClose,id}) {
+   function mapDispatchToProps (dispatch){
+      return{
+         deleteFavorite:(id)=>{dispatch(deleteFavorite(id))},
+         addFavorite:(characters)=>{dispatch(addFavorite(characters))}
+      }
+   }
+   const [isFav,setIsFav] = useState(false);
+   const handleFavorite= (event)=>{
+      if(isFav){
+         setIsFav(false);
+         deleteFavorite(id);
+      }
+      if(!isFav){
+         setIsFav(true);
+         addFavorite(characters);
+      }
+   }
    return (
       <div className={styles.containt}>
+      {
+         isFav ? (
+            <button onClick={handleFavorite}>❤️</button>
+         ) : (
+            <button onClick={handleFavorite}>🤍</button>
+         )
+      }
       <div className={`${styles.card} d-flex flex-column `} >
          <button className={styles.button} onClick={onClose}>Cerrar</button>
          <img className={`${styles.img} img-fluid`} src={image} alt="img" />

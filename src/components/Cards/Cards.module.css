@@ -1,5 +1,5 @@
 .cards{
-    display: flex;
+    display: grid;
     height: 300px;
     width: 260px;
     background-color: #3a2467;

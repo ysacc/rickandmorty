@@ -1,10 +1,29 @@
 .warning {
     border: solid red 1px;
     border-radius: 0.2em;
+    font-size: 16px;
+    text-align: center;
 }
 
 .danger {
     font-size: 10px;
     color: red;
     margin-left: 10em;
+    font-size: 16px;
+    text-align: center;
+}
+.form{
+    background-color: aquamarine;
+    border-radius: 50px;
+    text-align: center;
+    padding: 20px;
+
+}
+.btn{
+    border-radius: 50px;
+    width: 100px;
+    
+}
+label{
+    font-size: 20px;
 }
