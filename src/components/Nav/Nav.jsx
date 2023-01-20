@@ -8,6 +8,7 @@ export default function Nav({onSearch}){
         <nav className={styles.nav}>
             <Link to ="/" className={styles.link} >Logout</Link>
             <Link to ="/Home" className={styles.link}  >Home</Link>
+            <Link to ="/Favorites" className={styles.link}>Favorites</Link>
             <Link to ="/About" className={styles.link}>About</Link>
             <SearchBar onSearch={onSearch}/>
         </nav>

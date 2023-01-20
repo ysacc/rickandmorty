@@ -1,3 +1,5 @@
+import {ADD_FAVORITE,DELETE_FAVORITE} from "./actions"
+
 const initialState = {
     myfavorites :[]
 }

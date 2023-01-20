@@ -5,6 +5,7 @@ import { Route,Routes,useNavigate , useLocation } from 'react-router-dom'
 import About from './components/About/About.jsx'
 import Detail from "./components/Detail/Detail.jsx"
 import Form from './components/Form/Form'
+import Favorites from "./components/Favorites/Favorites"
 // import { render } from '@testing-library/react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
@@ -49,9 +50,9 @@ function App () {
   return (
     <div className='App' >
       {/* <h1 className="text-center mb-3">Characters</h1> */}
-      {/* <div>
+      <div>
         <img scr="src/imagenes/logo3.png" />
-      </div> */}
+      </div>
       {location.pathname !== "/" && <Nav  onSearch={onSearch}/>}
       {/* <Nav  onSearch={onSearch}/> */}
         <div className="container">
@@ -60,6 +61,7 @@ function App () {
           <Route exact path='/' element={<Form login={login}/>} />
           <Route path='/home' element={<Cards onClose={onClose} characters={characters}/>} />
           <Route path='/about' element={<About/>} />
+          <Route path='/favorites' element={<Favorites/>} />
           <Route path='detail/:detailId' element={<Detail/>} />
         </Routes>
         </div>
