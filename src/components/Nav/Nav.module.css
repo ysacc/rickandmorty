@@ -27,7 +27,8 @@
     border: 1px solid rgba(35, 185, 84, 0.93);
     text-align: right;
     margin:15px 15px 13px 5px;
-    padding: 20px;
+    padding: auto;
+    font-weight:bold ;
 }
 .link{
     text-align: left;
@@ -37,19 +38,21 @@
     align-items: left;
     display: inline-block;
     align-self:left;
-}
+    margin: 10px;
 
-.search{}
+}
 .input {
     width: 40%; border-radius: 8px;
     border: 2px solid #0b5ed7;
     box-shadow: 1px 3px 9px rgba($color: #000000, $alpha: 0.25);
     padding: 10px 15px;
-    &:focus { outline: none; }
+    &:focus { outline: none; };
+    
 }
 .btn {
     box-shadow: 1px 3px 9px rgba($color: #000000, $alpha: 0.25);
     text-align :right;
+    margin: 10px;
 }
 @media (max-width: 576px) {
     .input { width: 80%; }

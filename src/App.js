@@ -5,10 +5,12 @@ import { Route,Routes,useNavigate , useLocation } from 'react-router-dom'
 import About from './components/About/About.jsx'
 import Detail from "./components/Detail/Detail.jsx"
 import Form from './components/Form/Form'
+import Header from './components/Header/Header'
 import Favorites from "./components/Favorites/Favorites"
 // import { render } from '@testing-library/react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
+import styles from "./components/Nav/Nav.module.css";
 
 
 
@@ -19,12 +21,23 @@ function App () {
       .then((response) => response.json())
       .then((data) => {
         if (data.name) {
-            setCharacters((oldChars) => [...oldChars, data]);
-        } else {
-            window.alert('No hay personajes con ese ID');
+          if(!isRepetida(data.id)){
+            setCharacters(oldChars => [...oldChars, data])
+            } else {
+                window.alert("No podes repetir personaje");
+              }
+            } else {
+              window.alert("No hay personaje con ese ID");
+            }
+          });
         }
+    function isRepetida(id) {
+    let aux = false;
+    characters.forEach((character) => {
+        if(character.id === id) aux = true;
       });
-  }
+    return aux;
+    }
 
   const onClose = (id) =>{
     setCharacters(
@@ -50,9 +63,7 @@ function App () {
   return (
     <div className='App' >
       {/* <h1 className="text-center mb-3">Characters</h1> */}
-      <div>
-        <img scr="src/imagenes/logo3.png" />
-      </div>
+      <Header/>
       {location.pathname !== "/" && <Nav  onSearch={onSearch}/>}
       {/* <Nav  onSearch={onSearch}/> */}
         <div className="container">

@@ -36,15 +36,17 @@ export default function Card({myFavorites,addFavorite,deleteFavorite,name,specie
    // }, [myFavorites]);
    return (
       <div className={styles.containt}>
-      {
-         isFav ? (
-            <button onClick={handleFavorite}>❤️</button>
-         ) : (
-            <button onClick={handleFavorite}>🤍</button>
-         )
-      }
-      <div className={`${styles.card} d-flex flex-column `} >
+         <div className={`${styles.card} d-flex flex-column `} >
+         <div >
+         {
+            isFav ? (
+               <button className={styles.favorite} onClick={handleFavorite}>❤️</button>
+            ) : (
+               <button className={styles.favorite}onClick={handleFavorite}>🤍</button>
+            )
+         }
          <button className={styles.button} onClick={onClose}>Cerrar</button>
+         </div>
          <img className={`${styles.img} img-fluid`} src={image} alt="img" />
          <div className={`${styles.content}`}>
             <Link to={`/detail/${id}`}>
