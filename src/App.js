@@ -11,6 +11,7 @@ import Favorites from "./components/Favorites/Favorites"
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import styles from "./components/Nav/Nav.module.css";
+import Player from './components/Player/Player.js'
 
 
 
@@ -59,7 +60,13 @@ function App () {
   useEffect(() => {
     !access && navigate('/');
   }, [access]);
-  
+  const imagen = [
+    {
+      id: 1,
+      url: 'https://www.youtube.com/embed/t_ZEavuVcZ0',
+      title: 'Cambiemos el aspecto visual(UI) de nuestro Sublime Text 3'
+    }
+  ];
   return (
     <div className='App' >
       {/* <h1 className="text-center mb-3">Characters</h1> */}
@@ -77,6 +84,10 @@ function App () {
         </Routes>
         </div>
         </div>
+        <div>
+        <Player/>
+        </div>
+        <footer className={styles.footer}>Creado Por Ysacc en Henry</footer>
     </div>
   )
 }

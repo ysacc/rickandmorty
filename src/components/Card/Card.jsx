@@ -2,34 +2,38 @@ import { Link } from "react-router-dom";
 import styles from "./Card.module.css"
 import { addFavorite,deleteFavorite } from "../../redux/actions";
 import { useState,useEffect } from "react";
+import { connect, useDispatch } from "react-redux";
 
-
-export default function Card({myFavorites,addFavorite,deleteFavorite,name,species,gender,image,onClose,id}) {
-   function mapDispatchToProps (dispatch){
-      return{
-         deleteFavorite:(id)=>{dispatch(deleteFavorite(id))},
-         addFavorite:(name)=>{dispatch(addFavorite(name))}
-      }
+function mapDispatchToProps (dispatch){
+   return{
+   deleteFavorite :(id)=>dispatch(deleteFavorite(id)),
+   addFavorite:(character)=>dispatch(addFavorite(character))
    }
+}
+
+export default connect(null, mapDispatchToProps)(Card);
+
+export function Card({myFavorites,addFavorite,deleteFavorite,name,species,gender,image,onClose,id}) {
+   const dispatch = useDispatch();
    const [isFav,setIsFav] = useState(false);
-   const handleFavorite= (event)=>{
+   const handleFavorite= ()=>{
       if(isFav){
          setIsFav(false);
-         deleteFavorite(id);
+         dispatch(deleteFavorite(id));
       }
       if(!isFav){
          setIsFav(true);
-         addFavorite(name);
+         dispatch(addFavorite(name));
       }
    }
-   // const mapStateToProps = ()=>{
-   //    return {
-   //       ...myFavorites,
-   //    }
-   // }
+   const mapStateToProps = ()=>{
+      return {
+         ...myFavorites,
+      }
+   }
    // useEffect(() => {
-   //    myFavorites.forEach((fav) => {
-   //       if (fav.id === id) {
+   //    myFavorites.forEach((isFav) => {
+   //       if (isFav.id === id) {
    //          setIsFav(true);
    //       }
    //    });
@@ -61,6 +65,8 @@ export default function Card({myFavorites,addFavorite,deleteFavorite,name,specie
       </div>
    );
 }
+
+
 
 // export default function Card(props) {
 //    return (

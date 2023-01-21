@@ -3,6 +3,7 @@
     border-radius: 0.2em;
     font-size: 16px;
     text-align: center;
+    background: rgba(35, 185, 84, 0.26)
 }
 
 .danger {
@@ -11,12 +12,19 @@
     margin-left: 10em;
     font-size: 16px;
     text-align: center;
+    background: rgba(35, 185, 84, 0.26)
 }
 .form{
-    background-color: aquamarine;
+    background: rgba(35, 185, 84, 0.26);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(1.8px);
+    -webkit-backdrop-filter: blur(1.8px);
+    border: 1px solid rgba(35, 185, 84, 0.93);;
     border-radius: 50px;
     text-align: center;
     padding: 20px;
+    width: 300px;
+    height: 300px;
 
 }
 .btn{

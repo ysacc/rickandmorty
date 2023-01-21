@@ -39,6 +39,7 @@
     display: inline-block;
     align-self:left;
     margin: 10px;
+    font-size: large;
 
 }
 .input {
@@ -57,3 +58,13 @@
 @media (max-width: 576px) {
     .input { width: 80%; }
 }
+
+.footer{
+    font-size: 30px;
+    font-weight: bold;
+    color: aliceblue;
+    background-color: black;
+    border-radius: 70px;
+    margin: 10px;
+}
+

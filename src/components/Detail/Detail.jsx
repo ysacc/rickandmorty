@@ -29,10 +29,14 @@ const Details = ()=>{
                 <Link to="/home" className={styles.link}>Home</Link>
             </button>
             <h1 className={styles.name}>{character?.name}</h1>
-            <h2 className={styles.estado}>{character?.status}</h2>
-            <h2 className={styles.estado}>{character?.species}</h2>
-            <h2 className={styles.estado}>{character?.gender}</h2>
-            <h2 className={styles.estado}>{character?.origin?.name}</h2>
+            <label className={styles.label}>Status</label>
+            <h2 className={styles.estado}> {character?.status}</h2>
+            <label className={styles.label}>Species</label>
+            <h2 className={styles.estado}> {character?.species}</h2>
+            <label className={styles.label}>Gender</label>
+            <h2 className={styles.estado}> {character?.gender}</h2>
+            <label className={styles.label}>Origin</label>
+            <h2 className={styles.estado}> {character?.origin?.name}</h2>
             <img className={styles.img} src={character?.image} alt={character.name}/>
         </div>
     )

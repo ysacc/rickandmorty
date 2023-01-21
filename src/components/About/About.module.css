@@ -1,4 +1,14 @@
 h2{
     /* width: 16px;
     height: 26px; */
+    font-size: 50px;
+    font-style:oblique;
+}
+p{
+    font-size: 30px;
+    background-color: aquamarine;
+    border-radius: 50px;
+    text-align: center;
+    align-content: center;
+    padding: 20px;
 }
