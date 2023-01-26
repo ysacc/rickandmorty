@@ -1,10 +1,10 @@
-import { ADD_FAVORITE,DELETE_FAVORITE } from "./action.type";
-import axios from "axios";
+import { ADD_FAVORITE,DELETE_FAVORITE,ORDER , FILTER } from "./action.type";
 
-export const addFavorite = (characters) =>{
+
+export const addFavorite = (id) =>{
     return {
         type: ADD_FAVORITE ,
-        payload: characters
+        payload: id
     }
 };
 
@@ -14,3 +14,17 @@ export const deleteFavorite = (id) =>{
         payload: id
     }
 };
+
+export const filterCards = (status) =>{
+    return{
+        type:FILTER,
+        payload: status
+    }
+}
+
+export const orderCards = (id) =>{
+    return{
+        type:ORDER,
+        payload: id
+    }
+}

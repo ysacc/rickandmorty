@@ -68,3 +68,20 @@
     margin: 10px;
 }
 
+.logo{
+    display: inline-block;
+    width: 6em; /*El tamaño en que desees*/
+    /* filter: brightness(0); <-- Este ignoralo, lo puse porque la imagen no resaltaba sobre fondo negro  */
+    /* margin: -.5em auto; <-- Este es para cancelar el espacio entre la barra de navegación y la imagen */
+    vertical-align:middle;
+    float:left;
+    background: none;
+}
+.img{
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+    padding-top: 20px;
+    padding-left: 20px;
+}

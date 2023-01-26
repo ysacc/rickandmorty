@@ -1,8 +1,10 @@
 img{
     text-align: center;
     align-items: center;
+    /* width: 500px; */
 }
 div{
     text-align: center;
     padding-top: 10px;
+    margin: 0px
 }

@@ -14,7 +14,6 @@ import styles from "./components/Nav/Nav.module.css";
 import Player from './components/Player/Player.js'
 
 
-
 function App () {
   const[characters,setCharacters]= useState([]);
   const onSearch=(character) =>{

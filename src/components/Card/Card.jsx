@@ -1,21 +1,21 @@
 import { Link } from "react-router-dom";
 import styles from "./Card.module.css"
 import { addFavorite,deleteFavorite } from "../../redux/actions";
-import { useState,useEffect } from "react";
-import { connect, useDispatch } from "react-redux";
+import { useState} from "react";
+import { connect, useDispatch, } from "react-redux";
 
-function mapDispatchToProps (dispatch){
-   return{
-   deleteFavorite :(id)=>dispatch(deleteFavorite(id)),
-   addFavorite:(character)=>dispatch(addFavorite(character))
-   }
-}
-
-export default connect(null, mapDispatchToProps)(Card);
-
-export function Card({myFavorites,addFavorite,deleteFavorite,name,species,gender,image,onClose,id}) {
-   const dispatch = useDispatch();
+export  function Card({myFavorites,name,species,gender,image,onClose,id}) {
    const [isFav,setIsFav] = useState(false);
+
+   // useEffect(() => {
+   //    myFavorites.forEach((fav) => {
+   //       if (fav.id === id) {
+   //          setIsFav(true);
+   //       }
+   //    });
+   // }, [myFavorites]);
+   const dispatch = useDispatch();
+   
    const handleFavorite= ()=>{
       if(isFav){
          setIsFav(false);
@@ -26,18 +26,7 @@ export function Card({myFavorites,addFavorite,deleteFavorite,name,species,gender
          dispatch(addFavorite(name));
       }
    }
-   const mapStateToProps = ()=>{
-      return {
-         ...myFavorites,
-      }
-   }
-   // useEffect(() => {
-   //    myFavorites.forEach((isFav) => {
-   //       if (isFav.id === id) {
-   //          setIsFav(true);
-   //       }
-   //    });
-   // }, [myFavorites]);
+
    return (
       <div className={styles.containt}>
          <div className={`${styles.card} d-flex flex-column `} >
@@ -66,7 +55,21 @@ export function Card({myFavorites,addFavorite,deleteFavorite,name,species,gender
    );
 }
 
+export function mapDispatchToProps (dispatch){
+   return{
+   deleteFavorite :(id)=>dispatch(deleteFavorite(id)),
+   addFavorite:(id)=>dispatch(addFavorite(id))
+   }
+}
 
+export function mapStateToProps (state){
+   return {
+      myFavorites : state.myFavorites
+   }
+}
+
+
+export default connect(mapStateToProps , mapDispatchToProps)(Card);
 
 // export default function Card(props) {
 //    return (
