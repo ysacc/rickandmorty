@@ -15,6 +15,7 @@ export default function Nav({onSearch}){
             <Link to ="/Home" className={styles.link}  ><box-icon name='home-smile' animation='burst' color='#1b31e0' size="md"></box-icon> Home</Link>
             <Link to ="/Favorites" className={styles.link}><box-icon name='heart-circle' animation='spin' color='#d61717' size="md" ></box-icon> Favorites</Link>
             <Link to ="/About" className={styles.link}><box-icon name='cool' animation='flashing' color='#1b45d8'size="md" ></box-icon> About</Link>
+            <a href="https://github.com/ysacc" className={styles.link} target="blank"><box-icon name='github' type='logo' animation='fade-right'size="md" ></box-icon> GitHub</a>
             <SearchBar onSearch={onSearch}/>
         </nav>
     )

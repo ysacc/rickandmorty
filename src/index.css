@@ -29,3 +29,8 @@ code {
   gap: 1em;
   align-self: center;
 } */
+@media screen and (min-width: 800px) {
+  body {
+    margin: 1em 2em;
+  }
+}
