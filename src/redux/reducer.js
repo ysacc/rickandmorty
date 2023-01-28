@@ -9,7 +9,7 @@ const rootReducer = (state = initialState, {type,payload})=>{
         case ADD_FAVORITE:
             return {
                 ...state, // aun falta
-                myFavorites:[...state.allCharacters,payload],
+                myFavorites:[...state.myFavorites,payload],
                 allCharacters:[...state.allCharacters,payload]
             }
         case FILTER:

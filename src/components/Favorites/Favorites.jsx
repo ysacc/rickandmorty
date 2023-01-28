@@ -1,7 +1,8 @@
 import React from "react"
 import { connect, useDispatch } from "react-redux"
 import { filterCards, orderCards } from "../../redux/actions";
-import { Card } from "../Card/Card"
+import  Card  from "../Card/Card"
+import styles from "./favorites.module.css"
 
 export  function Favorites({myFavorites}){
 
@@ -31,23 +32,25 @@ export  function Favorites({myFavorites}){
                 </select>
             </div>
             <h1>ACA VAN LOS FAVORITOS</h1>
-            { myFavorites.map((id,name,species,gender,image,index)=>{
-                return(
-                <Card
-                id ={id}
-                name={name}
-                species={species}
-                gender={gender}
-                image={image}
-                key={index}
-                />)
-            })}
+            <div className={styles.cards}>
+            {myFavorites.map(({id,name,species,gender,image},index) => {
+                    return(<Card
+                        id ={id}
+                        name={name}
+                        species={species}
+                        gender={gender}
+                        image={image}
+                        key={index}
+                    />)
+            }
+            ) } 
+            </div>
         </div>
     )
 }
 export function mapStateToProps(state){
     return {
-    myFavorites: state.myfavorites
+    myFavorites: state.myFavorites
     }
 }
 export default connect(mapStateToProps,null)(Favorites)

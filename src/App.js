@@ -58,14 +58,9 @@ function App () {
   }
   useEffect(() => {
     !access && navigate('/');
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [access]);
-  const imagen = [
-    {
-      id: 1,
-      url: 'https://www.youtube.com/embed/t_ZEavuVcZ0',
-      title: 'Cambiemos el aspecto visual(UI) de nuestro Sublime Text 3'
-    }
-  ];
+  
   return (
     <div className='App' >
       {/* <h1 className="text-center mb-3">Characters</h1> */}
@@ -93,13 +88,3 @@ function App () {
 
 
 export default App;
-
-{/* <body className={styles.containt}>
-<div className= {styles.App}>
-  <div className = {styles.barra}>
-  </div>
-      <div className={styles.div_body}>
-      </div>
-      <hr />
-    </div>
-    </body>  */}
