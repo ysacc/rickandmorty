@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+<h1 align="center">Rick and Morty :stars:</h1>
+<hr>
+<p align="center"><img src="https://user-images.githubusercontent.com/112214885/215333868-68e494eb-ce25-4874-9849-30e3afee6f32.png"/></p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## APPLIED TECHNOLOGIES
 
-### `npm start`
+![HTML5](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=html5)
+![JavaScript](https://img.shields.io/badge/-JavaScript-000000?style=flat&logo=javascript)
+![Less](https://img.shields.io/badge/-Less-000000?style=flat&logo=less)
+![Webpack](https://img.shields.io/badge/-Webpack-000000?style=flat&logo=Webpack)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![GitHub](https://img.shields.io/badge/-GitHub-222222?style=flat&logo=github&logoColor=181717)
+![Node.js](https://img.shields.io/badge/-Node.js-222222?style=flat&logo=node.js&logoColor=339933)
+![React](https://img.shields.io/badge/-React-222222?style=flat&logo=React&logoColor=61DAFB)
+![Redux](https://img.shields.io/badge/-Redux-222222?style=flat&logo=Redux&logoColor=61DAFB)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Routes
 
-### `npm test`
+| Request Type | Endpoint    | Returns                                                                                                                                                   | Status |
+| ------------ | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
+| GET          | /characters | An object containing an info property with count, pages, next, and previous page info and a results property, an array containing all characters details. | 200    |
+| GET          | /favorites  | An array of objects containing user's favorite characters' details.                                                                                       | 200    |
+| GET          | /filter     | Requires a category and query as query parameters to filter for specific character data, an object with a info and results property.                      | 200    |
+| GET          | /episodes   | An object containing an info property with count, pages, next, and previous page info and a results property, an array containing all episodes details.   | 200    |
+| POST         | /character  | An object containing character details. Id, name, status, species, type, gender, origin, location, image, episode, url.                                   | 201    |
+| DELETE       | /character  | An object containing a name property matching the character to be deleted.                                                                                | 200    |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+### Navigation Bar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- The navigation bar was built utilizing the React Router. The React Router API allows us to build single page applications with navigation without the need for page refreshing, which dramatically improves user experience and render times.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- The React Router uses the Router and Link components, which prevents page refreshes and allows the user to use the browsers functionality like a forward and back button in order to maintain the correct page view.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Navigation Bar](client/assets/navigation.png 'Search bar feature')
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Search
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- The search bar utilizes GET /characters endpoint which can be provided query parameters for the category and the query string. These two query parameters correspond to the Rick and Morty API, allowing for seamless filtering of the **600+** characters available.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Material-UI was utilized for this feature. Material-UI provides minimalist React components, built utilizing Material Design framework in order for fast and clean web development.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Pagination
 
-### Code Splitting
+- Utilizing React Hooks to store state of the current page traversed, which serves as the query parameter for my GET /character endpoint.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Latency was vastly increased with the use of Redis. Redis is a great database caching technology that is optimized for speed using data structures such as hashes and sets. Each page and its corresponding data was stored as a key value pair, after the user's first click on the respective page.
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Favorites
 
-### Advanced Configuration
+- The favorites collection utilizes the POST /character endpoint to add a user's favorite Rick and Morty characters, and persists in a MongoDB database collection.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- Characters can be removed from the collection with the DELETE /character endpoint.
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Accessibility
+
+- Achieved 100 accessibility through Google Chrome Lighthouse report. Through the use of Material-UI components, adding roles, aria-labels, semantic HTML provides a seamless and web accessible application for users with or without disabilities.
+
+
