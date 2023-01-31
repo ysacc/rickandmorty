@@ -1,0 +1,13 @@
+.cards{
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start; */
+
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20em, 20em));
+    justify-items: center;
+    grid-gap:5px;
+
+}

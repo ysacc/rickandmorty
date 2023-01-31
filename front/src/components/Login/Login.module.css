@@ -1,0 +1,161 @@
+/******* global styles, both for sign in and login *******/
+
+.login_container{
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://e1.pxfuel.com/desktop-wallpaper/873/692/desktop-wallpaper-interdimensional-rss-the-rick-and-morty-podcast-rick-and-morty-outer-space.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+.subcontainer{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.h1{
+    font-size: 1.8rem;
+    font-family: 'Rick and Morty font';
+    text-align: center;
+    color: var(--font-orange);
+}
+
+.form{
+    margin: 0 auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(37, 35, 35);
+    border-radius: 7px;
+    margin-top: 15px;
+    padding: 30px 60px;
+    border: 2px solid var(--font-orange);
+}
+
+.form *, .btn_hide{
+    background-color: transparent;
+}
+
+.form input, .form label{
+    color: white;
+}
+
+.form input::placeholder{
+    color: rgb(174, 167, 167);
+}
+
+
+.input, .divPassword{
+    width: 100%;
+    margin: 15px 0px;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.input_name{
+    text-transform: none;
+}
+
+.divPassword{
+    display: flex;
+}
+
+.input_password{
+    position: relative;
+    width: 100%;
+    border: none;
+    outline: none;
+    border: none;
+    text-transform: none;
+}
+
+.login{
+    font-weight: 900;
+    font-size: 0.9rem;
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px 0px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    margin: 20px;
+    background: rgb(110, 177, 110);
+}
+
+.btn_hide{
+    border: none;
+    font-size: 1.2rem;
+    color: var(--forms-green);
+    cursor: pointer;
+}
+
+.sign_up_container{
+    width: 100%;
+    color: rgb(174, 167, 167);
+    text-align: center;
+}
+
+.sign_up{
+    text-decoration: none;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 15px;
+    display: block;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 900;
+    background: rgb(186, 151, 84);
+}
+
+/* colors for login section */
+.input, .divPassword{
+    border: none;
+    outline: 1px solid var(--forms-green);
+}
+
+/******* local, only for login *******/
+
+.checkbox_container{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px 0px;
+}
+
+.checkbox_container label{
+    color: white;
+}
+
+.checkbox_container input{
+    margin-right: 5px;
+    accent-color: var(--forms-green);
+}
+
+.incorrect_data{
+    padding-top: 20px;
+    color: red;
+    font-size: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.final_message{
+    padding-top: 30px;
+    line-height: 1.5;
+    color: white;
+    text-align: center;
+}
+
+.final_message h2{color: var(--forms-green);}
+
+hr{
+    width: 100%;
+    border-bottom: 1px solid rgb(174, 167, 167);
+    margin-bottom: 25px;
+}

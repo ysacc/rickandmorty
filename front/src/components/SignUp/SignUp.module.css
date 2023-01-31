@@ -1,0 +1,74 @@
+/******* local, only for sign in *******/
+
+.signUp_container{
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://img.freepik.com/foto-gratis/paisaje-nocturno-galaxia_23-2148895321.jpg?w=996&t=st=1674426246~exp=1674426846~hmac=f7d47753b6121d8a522e83bc510d28dc61bc677fd30cfcc8e712d796eb7a98b9');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*** other styles***/
+
+.name_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.sign_in_gender{
+    width: 100%;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 10px;
+}
+
+.sign_in_gender_subcontainer{
+    margin: 15px 0px;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.sign_in_gender input{
+    position: relative;
+    top: 1px;
+    margin-right: 5px;
+}
+
+.sign_in_gender input:checked{
+    accent-color: var(--forms-green);
+}
+
+.sign_in_gender label{
+    color: rgb(174, 167, 167);
+}
+
+.uncompleted_data{
+    font-size: 1.1rem;
+    width: 100%;
+    text-align: left;
+    color: red;
+}
+
+.failed_password, .failed_email{
+    color: rgb(236, 236, 12);
+    width: 100%;
+    text-align: left;
+    padding: 5px 0px;
+}
+
+.back{
+    color: var(--font-orange);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.back:hover{
+    color: var(--forms-green);
+    transition-duration: 1s;
+}

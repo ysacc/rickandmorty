@@ -1,0 +1,35 @@
+.divContainer{
+    background-color: rgb(39, 43, 51);
+    height: 100vh;
+    width: 100%;
+}
+
+.error_container{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error_mainText{
+    padding-top: 100px;
+    color: rgb(245, 19, 19);
+    font-size: 2.8rem;
+}
+
+.error_incorrectText{
+    margin-top: 30px;
+    color: white;
+    font-size: 1.3rem;
+}
+
+@media(min-width: 750px){
+    .error_mainText{font-size: 3rem;}
+    .error_incorrectText{font-size: 1.5rem;}
+}
+
+@media(min-width: 1000px){
+    .error_mainText{font-size: 3.5rem;}
+}
