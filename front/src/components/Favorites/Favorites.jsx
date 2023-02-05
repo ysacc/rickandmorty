@@ -2,7 +2,6 @@ import React from "react"
 import { connect, useDispatch } from "react-redux"
 import { filterCards, orderCards } from "../../redux/actions";
 import  Card  from "../Card/Card"
-import styles from "./favorites.module.css"
 
 export  function Favorites({myFavorites}){
 
@@ -31,20 +30,19 @@ export  function Favorites({myFavorites}){
                     <option value="unknown">Unknown</option>
                 </select>
             </div>
-            <h1>ACA VAN LOS FAVORITOS</h1>
-            <div className={styles.cards}>
-            {myFavorites.map(({id,name,species,gender,image},index) => {
+            <h2>My Favorites</h2>
+            <div >
+            {myFavorites?.map((character) => {
                     return(<Card
-                        id ={id}
-                        name={name}
-                        species={species}
-                        gender={gender}
-                        image={image}
-                        key={index}
+                        id ={character.id}
+                        name={character.name}
+                        species={character.species}
+                        gender={character.gender}
+                        image={character.image}
+                        key={character.index}
                     />)
-            }
-            ) } 
-            </div>
+                    }) }
+        </div>
         </div>
     )
 }
@@ -54,3 +52,5 @@ export function mapStateToProps(state){
     }
 }
 export default connect(mapStateToProps,null)(Favorites)
+
+

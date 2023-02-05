@@ -17,6 +17,13 @@ import Error from './components/Error/Error.js'
 
 function App () {
   const[characters,setCharacters]= useState([]);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [access,setAccess] = useState(false)
+  const username = "mail@ggg.com";
+  const password = "123456";
+
+
   const onSearch=(character) =>{
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
       .then((response) => response.json())
@@ -45,12 +52,6 @@ function App () {
       characters.filter(character => character.id !==id)
     )
   }
-  const navigate = useNavigate();
-  const location = useLocation();
-  const [access,setAccess] = useState(false)
-  const username = "mail@ggg.com";
-  const password = "123456";
-
   function login (userData) {
     if (userData.password === password && userData.username === username) {
       setAccess(true);

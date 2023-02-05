@@ -1,8 +1,5 @@
 import React from "react";
 import validation from "./validation";
-import "./Form.module.css"
-import { useNavigate } from "react-router-dom";
-import { useEffect , useState } from "react";
 import styles from "./Form.module.css"
 
 
@@ -29,17 +26,12 @@ export default function Form ({login}){
         )
     }
 
-    const [errorMessages, setErrorMessages] = useState({});
-    const [isSubmitted, setIsSubmitted] = useState(false);
-
-    const [access,setAccess] = useState({
-        access:false,
-        
-    })
     const handleSubmit = (event) => {
         event.preventDefault();
         login(userData);
     }
+
+    
     return(
         
         <div className={styles.form}>
@@ -69,6 +61,7 @@ export default function Form ({login}){
             <p className={styles.danger}>{errors.password}</p>
             <button type="submit" className={styles.btn}>LOGIN</button>
             </form>
+            <p>Prueba con Username:mail@ggg.com // Password: 123456 </p>
         </div>
     )
 }

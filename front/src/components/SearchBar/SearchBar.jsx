@@ -13,7 +13,7 @@ export default function SearchBar({onSearch}) {
       <div >
          
          <input type='search' value={character} onChange={HandleChange} placeholder="Search for ID" className={styles.input} />
-         <button onClick={()=>onSearch(character)}className={`${styles.btn} btn btn-primary fs-5`}> Agregar</button>
+         <button onClick={()=>onSearch(character)}className={`${styles.btn} btn btn-primary fs-5`}> Add</button>
          
       </div>
    );

@@ -6,6 +6,7 @@ import { connect, useDispatch, } from "react-redux";
 import { useEffect } from "react";
 
 export  function Card(props) {
+   const dispatch = useDispatch();
    const [isFav,setIsFav] = useState(false);
 
    useEffect(() => {
@@ -17,8 +18,6 @@ export  function Card(props) {
       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [props.myFavorites]);
 
-   const dispatch = useDispatch();
-   
    const handleFavorite= ()=>{
       if(isFav){
          setIsFav(false);
@@ -26,7 +25,7 @@ export  function Card(props) {
       }
       if(!isFav){
          setIsFav(true);
-         dispatch(addFavorite(props.id));
+         dispatch(addFavorite(props));
       }
    }
 

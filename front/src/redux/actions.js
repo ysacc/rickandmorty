@@ -6,10 +6,10 @@ import { ADD_FAVORITE,DELETE_FAVORITE,ORDER , FILTER} from "./action.type";
 // import axios from "axios";
 
 
-export const addFavorite = (id) =>{
+export const addFavorite = (character) =>{
     return {
         type: ADD_FAVORITE ,
-        payload: id
+        payload: character
     }
 };
 

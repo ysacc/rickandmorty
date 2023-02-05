@@ -12,7 +12,7 @@ export default function Cards({characters , onClose}) {
          species={species}
          gender={gender}
          image={image}
-         key={index}
+         key={id}
          onClose={()=> onClose(id)}
          />
       })
