@@ -1,13 +1,23 @@
 .cards{
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start; */
-
-
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20em, 20em));
     justify-items: center;
-    grid-gap:5px;
+    grid-gap:2px;
 
+}
+.title{  font-size: 44px;
+    text-align: center;
+    color: #333;
+    text-shadow: 2px 2px #FFF, 4px 4px #333;
+    animation: shimmer 1s infinite;
+    user-select: none;
+}
+
+@keyframes shimmer {
+    0% {
+    text-shadow: 2px 2px #FFF, 4px 4px #333;
+    }
+    100% {
+    text-shadow: -2px -2px #FFF, -4px -4px #333;
+    }
 }

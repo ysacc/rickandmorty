@@ -2,7 +2,10 @@ import React from "react";
 import ReactPlayer from "react-player";
 import styles from "./Player.module.css"
 
-const Player = () => {
+
+const Player = (videoSrc) => {
+
+    
     return (
         <div className={styles.player}>
             <ReactPlayer

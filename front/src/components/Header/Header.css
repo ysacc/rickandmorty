@@ -2,6 +2,7 @@ img{
     text-align: center;
     align-items: center;
     /* width: 500px; */
+    user-select: none;
 }
 div{
     text-align: center;

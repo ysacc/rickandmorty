@@ -24,21 +24,27 @@ const Details = ()=>{
     }, [detailId])
 
     return(
+        <div>
+            <h2 className={styles.title}>Details</h2>
         <div className={styles.detail}>
             <button className={styles.button}>
-                <Link to="/home" className={styles.link}>Back to th Characters</Link>
+                <Link to="/home" className={styles.link}>Back to the Cards</Link>
             </button>
+            <div className= {styles.cardimg}>
             <img className={styles.img} src={character?.image} alt={character.name}/>
+            </div>
+            <div className= {styles.cardtext}>
             <h2 className={styles.name}>{character?.name}</h2>
             <label className={styles.label}>Status</label>
-            <h3 className={styles.estado}> {character?.status}</h3>
+            <h3 className={styles.state}> {character?.status}</h3>
             <label className={styles.label}>Species</label>
-            <h3 className={styles.estado}> {character?.species}</h3>
+            <h3 className={styles.state}> {character?.species}</h3>
             <label className={styles.label}>Gender</label>
-            <h3 className={styles.estado}> {character?.gender}</h3>
+            <h3 className={styles.state}> {character?.gender}</h3>
             <label className={styles.label}>Origin</label>
-            <h3 className={styles.estado}> {character?.origin?.name}</h3>
-            
+            <h3 className={styles.state}> {character?.origin?.name}</h3>
+            </div>
+        </div>
         </div>
     )
 

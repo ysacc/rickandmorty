@@ -8,10 +8,9 @@
     margin: 10px;
     position: relative;
     justify-content: center;
-    display: grid;
+    display: flex;
     justify-content:space-evenly;
     word-wrap:break-word;
-    
 }
 .card:hover {
     transform: translateY(-20px);
@@ -61,6 +60,9 @@
     font-size: 100%;
     color:aliceblue;
     word-wrap:break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .gender{
     text-align: center;
@@ -69,6 +71,7 @@
     color:aliceblue;
     word-wrap:break-word;
     padding: 5px;
+    text-overflow: ellipsis;
 }
 .name{
     text-align: center;
@@ -76,6 +79,9 @@
     /* font-weight: bold; */
     color:#4CAF50;
     word-wrap:break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .favorite{
     border-radius: 50px;

@@ -45,11 +45,11 @@ export  function Card(props) {
          <img className={`${styles.img} img-fluid`} src={props.image} alt="img" />
          <div className={`${styles.content}`}>
             <Link to={`/detail/${props.id}`}>
-               <div className={styles.name}>{props.name}</div>
+               <h2 className={styles.name}>{props.name}</h2>
             </Link>
             <div className="">
-               <div className={styles.species}>Species: {props.species}</div>
-               <div className={styles.gender}>Gender : {props.gender}</div>
+               <h3 className={styles.species}>Species: {props.species}</h3>
+               <h3 className={styles.gender}>Gender : {props.gender}</h3>
             </div>
          </div>
       </div>

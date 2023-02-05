@@ -66,6 +66,7 @@
     background-color: black;
     border-radius: 70px;
     margin: 10px;
+    user-select: none;
 }
 
 .logo{

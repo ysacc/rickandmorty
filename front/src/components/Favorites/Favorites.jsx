@@ -2,8 +2,9 @@ import React from "react"
 import { connect, useDispatch } from "react-redux"
 import { filterCards, orderCards } from "../../redux/actions";
 import  Card  from "../Card/Card"
+import styles from "../Favorites/favorites.module.css"
 
-export  function Favorites({myFavorites}){
+export  function Favorites({myFavorites,onClose}){
 
     const dispatch = useDispatch();
     const handleClick = (event) => {
@@ -18,6 +19,7 @@ export  function Favorites({myFavorites}){
     }
     return(
         <div>
+            <h2 className={styles.title}>My Favorites</h2>
             <div>
                 <select name="order" onClick={handleClick} id="">
                     <option value="Ascendente">Ascendente</option>
@@ -30,8 +32,8 @@ export  function Favorites({myFavorites}){
                     <option value="unknown">Unknown</option>
                 </select>
             </div>
-            <h2>My Favorites</h2>
-            <div >
+            
+            <div className={styles.favorites}>
             {myFavorites?.map((character) => {
                     return(<Card
                         id ={character.id}

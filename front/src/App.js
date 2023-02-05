@@ -12,7 +12,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import styles from "./components/Nav/Nav.module.css";
 import Player from './components/Player/Player.js'
-import Error from './components/Error/Error.js'
 
 
 function App () {
@@ -23,7 +22,7 @@ function App () {
   const username = "mail@ggg.com";
   const password = "123456";
 
-
+  
   const onSearch=(character) =>{
     fetch(`https://rickandmortyapi.com/api/character/${character}`)
       .then((response) => response.json())
@@ -77,14 +76,13 @@ function App () {
           <Route path='/about' element={<About/>} />
           <Route path='/favorites' element={<Favorites/>} />
           <Route path='detail/:detailId' element={<Detail/>} />
-          <Route path="/*" element={<Error/>} />
         </Routes>
         </div>
         </div>
         <div>
-        <Player/>
+        {location.pathname !== '/About' && <Player/>}
         </div>
-        <footer className={styles.footer}>Creado Por Ysacc en Henry</footer>
+        <footer className={styles.footer}>Create for Ysacc in Henry</footer>
     </div>
   )
 }
