@@ -26,6 +26,7 @@
     width: 300px;
     height: 300px;
     user-select: none;
+    font-weight: 100;
 
 }
 .btn{
@@ -36,3 +37,4 @@
 label{
     font-size: 20px;
 }
+

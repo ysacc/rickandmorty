@@ -35,6 +35,7 @@ export default function Form ({login}){
     return(
         
         <div className={styles.form}>
+            
             <h1>  INGRESO</h1>
             <form 
             onSubmit={handleSubmit}
@@ -63,5 +64,6 @@ export default function Form ({login}){
             </form>
             <p>Prueba con Username:mail@ggg.com // Password: 123456 </p>
         </div>
+        
     )
 }
