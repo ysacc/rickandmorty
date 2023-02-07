@@ -5,6 +5,8 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/112214885/216842997-1c4e9339-51c7-44cd-ac13-5d1b0434034e.png"/></p>
 <p align="center"><img src="https://user-images.githubusercontent.com/112214885/216843041-d42082e2-370c-427f-90f3-7c3cafe3d11b.png"/></p>
 
+[View Live ](https:rickandmorty-ysacc.vercel.app)
+
 <p>Prueba con Username:mail@ggg.com // Password: 123456 </p>
 ## APPLIED TECHNOLOGIES
 
