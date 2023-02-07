@@ -1,9 +1,11 @@
 <h1 align="center">Rick and Morty :stars:</h1>
 <hr>
-<p align="center"><img src="https://user-images.githubusercontent.com/112214885/215333868-68e494eb-ce25-4874-9849-30e3afee6f32.png"/></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/112214885/216842924-c8c859a8-c9a5-471d-8f2c-71d6d9534453.png"/></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/112214885/216842973-bc48ab9a-f886-4b9d-9fd5-97345278e7f9.png"/></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/112214885/216842997-1c4e9339-51c7-44cd-ac13-5d1b0434034e.png"/></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/112214885/216843041-d42082e2-370c-427f-90f3-7c3cafe3d11b.png"/></p>
 
-
-
+<p>Prueba con Username:mail@ggg.com // Password: 123456 </p>
 ## APPLIED TECHNOLOGIES
 
 ![HTML5](https://img.shields.io/badge/-HTML5-000000?style=flat&logo=html5)
