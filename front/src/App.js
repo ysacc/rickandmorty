@@ -23,8 +23,8 @@ function App () {
   const password = "123456";
 
   
-  const onSearch=(character,{id}) =>{
-    fetch(`https://rickandmortyapi.com/api/character/${id}`)
+  const onSearch=(character) =>{
+    fetch(`http://localhost:3001/rickandmorty/onsearch/${character}`)
       .then((response) => response.json())
       .then((data) => {
         if (data.name) {
