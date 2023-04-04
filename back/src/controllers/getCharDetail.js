@@ -1,10 +1,9 @@
 const axios = require('axios');
 
-//funcion asincrona
-const getCharById =  async function(req, res) {
+const getCharDetail = async function (req, res) {
     try {
-        const { id } = req.params;
-        const response = await axios(`https://rickandmortyapi.com/api/character/${id}`);
+        const { detailId } = req.params;
+        const response = await axios(`https://rickandmortyapi.com/api/character/${detailId}`)
         const data = response.data
         const character = {
             id: data.id,
@@ -12,17 +11,16 @@ const getCharById =  async function(req, res) {
             species: data.species,
             image: data.image,
             gender: data.gender,
-            status: data.status
+            status: data.status,
+            origin: data.origin
         }
         res.status(200).json(character)
     } 
     catch (error) {
-        res.status(404).send("Algo salió mal")
+        res.status(400).send('Algo salió mal')
     }
 
 }
-
-
 module.exports = {
-    getCharById
+    getCharDetail
 }
